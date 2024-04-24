@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: user-be
+spec:
+  containers:
+    - image: kangjoshi/user-be:latest
+      name: user-be
+      livenessProbe:
+        httpGet:
+          path: /monitors
+          port: 8080
+  initContainers:
+    - name: delay-start
+      image: busybox:1.28
+      command: ['sh', '-c', 'echo delay!! && sleep 10']
