@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs-user-nginx
+spec:
+  replicas: 5
+  selector:
+      matchLabels:
+        app: nginx
+      matchExpressions:
+        - key: version
+          operator: Exists
+  template:
+    metadata:
+      name: user-nginx:1.24
+      labels:
+        app: nginx
+        version: "1.24"
+    spec:
+      containers:
+        - name: user-nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80

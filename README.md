@@ -13,3 +13,14 @@
   - sidecar
   - adapter
   - ambassador
+
+### Controller
+- [X] Replication-controller
+  - scale-out
+- [X] Replicaset
+  - selector
+    - matchLabels
+    - matchExpressions
+- [X] Deployment
+  - RollingUpdate 
+  - auto-scale
