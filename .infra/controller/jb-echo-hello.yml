@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: echo-hello
+spec:
+  template:
+    spec:
+      containers:
+        - name: echo-hello
+          image: busybox
+          command: ["bash"]
+          args:
+            - echo "hello world!" && exit -1
+      restartPolicy: OnFailure
+  backoffLimit: 4

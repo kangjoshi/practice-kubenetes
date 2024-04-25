@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ss-user-nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: "user-nginx"
+  replicas: 3
+  minReadySeconds: 10
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: user-nginx
+          image: nginx
+          ports:
+            - containerPort: 80

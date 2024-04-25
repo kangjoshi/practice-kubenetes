@@ -22,5 +22,9 @@
     - matchLabels
     - matchExpressions
 - [X] Deployment
-  - RollingUpdate 
+  - rollingUpdate 
   - auto-scale
+- [X] DaemonSet
+- [X] StatefulSet
+- [X] Job
+- [X] CronJob
