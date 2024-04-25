@@ -28,3 +28,10 @@
 - [X] StatefulSet
 - [X] Job
 - [X] CronJob
+
+### Service
+- [X] ClusterIP
+- [X] NodePort
+- [ ] LoadBalancer
+- [X] ExternalName
+- [X] Headless

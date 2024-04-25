@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-nginx
+  annotations:
+    kubernetes.io/change-cause: version 1.24
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: user-nginx
+          image: nginx:1.24
+          ports:
+            - containerPort: 80
