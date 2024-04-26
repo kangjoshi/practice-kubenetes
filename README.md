@@ -35,3 +35,6 @@
 - [ ] LoadBalancer
 - [X] ExternalName
 - [X] Headless
+
+### Ingress
+- [X] Nginx Ingress
