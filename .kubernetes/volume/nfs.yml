@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-pod
+  labels:
+    app: nfs-client
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nfs-client
+  template:
+    metadata:
+      labels:
+        app: nfs-client
+    spec:
+      containers:
+        - name: nfsapp
+          image: arisu1000/simple-container-app
+          volumeMounts:
+            - mountPath: /test-nfs
+              name: nfs-vol
+          ports:
+            - containerPort: 8080
+      volumes:
+        - name: nfs-vol
+          nfs:
+            

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-app
+  template:
+    metadata:
+      labels:
+        app: simple-app
+    spec:
+      containers:
+        - name: simple-app
+          image: arisu1000/simple-container-app
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /tmp
+              name: my-vol
+      volumes:
+        - name: my-vol
+          persistentVolumeClaim:
+            claimName: pvc-hostpath
