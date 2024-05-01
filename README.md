@@ -38,3 +38,7 @@
 
 ### Ingress
 - [X] Nginx Ingress
+
+### Label
+- [X] Label
+- [X] Node Label
