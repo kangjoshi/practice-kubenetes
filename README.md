@@ -42,3 +42,9 @@
 ### Label
 - [X] Label
 - [X] Node Label
+
+
+### Volume
+- [ ] ConfigMap
+- [ ] Secret
+
