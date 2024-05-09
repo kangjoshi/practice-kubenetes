@@ -42,3 +42,10 @@
 ### Label
 - [X] Label
 - [X] Node Label
+
+### Volume
+- [ ] emptyDir
+- [ ] hostpath
+- [ ] nfs
+- [X] PV, PVC
+
