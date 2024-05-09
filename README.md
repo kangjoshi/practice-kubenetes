@@ -44,8 +44,26 @@
 - [X] Node Label
 
 ### Volume
+- [ ] ConfigMap
+- [ ] Secret
 - [ ] emptyDir
 - [ ] hostpath
 - [ ] nfs
 - [X] PV, PVC
 
+### 로그
+- [ ] ELK
+- [ ] Loki
+
+### 모니터링
+- [ ] 프로메테우스
+  - 프로메테우스 오퍼레이터
+
+### 오토 스케일링
+- [ ] 오토 스케일링
+
+### 헬름
+- [ ] 헬름
+
+### 사용자 정의 지원
+- [ ] 사용자 정의 지원
